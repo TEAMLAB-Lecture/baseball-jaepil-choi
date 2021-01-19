@@ -125,7 +125,7 @@ def is_validated_number(user_input_number):
 
     if is_digit(user_input_number) and \
         is_between_100_and_999(user_input_number) and \
-            is_validated_number(user_input_number):
+            is_duplicated_number(user_input_number):
             return True
     else:
         return False
@@ -163,7 +163,7 @@ def get_not_duplicated_three_digit_number():
                 raise Exception("Maximum count exceeded. Already tried 1000.")
             count += 1
     # ==================================
-    return result
+    return int(result)
 
 
 def get_strikes_or_ball(user_input_number, random_number):

@@ -199,7 +199,7 @@ def get_strikes_or_ball(user_input_number, random_number):
 
     u100, u10, u1 = list(user_input_number)
     c100, c10, c1 = list(random_number)
-    com_s = set(c100, c10, c1)
+    com_s = {c100, c10, c1}
     
     def ball_or_strike(u, c):
         nonlocal strikes, balls

@@ -155,7 +155,7 @@ def get_not_duplicated_three_digit_number():
     # get_random_number() 함수를 사용하여 random number 생성
     count = 0
     while 1:
-        result = get_random_number()
+        result = str(get_random_number())
         if is_validated_number(result):
             break
         else:

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import random
+from typing import Counter
 
 
 def get_random_number():
@@ -152,11 +153,15 @@ def get_not_duplicated_three_digit_number():
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     # get_random_number() 함수를 사용하여 random number 생성
-
+    count = 0
     while 1:
         result = get_random_number()
         if is_validated_number(result):
             break
+        else:
+            if count == 1000:
+                raise Exception("Maximum count exceeded. Already tried 1000.")
+            count += 1
     # ==================================
     return result
 

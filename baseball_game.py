@@ -307,10 +307,10 @@ def main():
             return
 
         if is_validated_number(user_input):
-            result = get_strikes_or_ball(user_input, random_number)
-            print(result)
+            strikes, balls = get_strikes_or_ball(user_input, random_number)
+            print(f'Strikes: {strikes} , Balls: {balls}')
 
-            if result == [3, 0]:
+            if [strikes, balls] == [3, 0]:
 
                 while 1:
                     ask = input('You win, one more? (Y/N) : ')

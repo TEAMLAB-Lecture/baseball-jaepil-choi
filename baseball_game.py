@@ -327,6 +327,7 @@ def main():
                         # sys.exit(0)
                         return
                     else:
+                        print('Wrong Input')
                         continue
                 
                 continue

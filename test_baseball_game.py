@@ -1,12 +1,17 @@
 # -*- coding: utf8 -*-
 
+from random import random
 import unittest
 import baseball_game as bg
 
-from mock import patch
+from unittest.mock import patch
 from io import StringIO
 
+import logging
 
+
+logging.basicConfig()
+log = logging.getLogger('LOG')
 class TestBaseballGame(unittest.TestCase):
 
     def test_is_digit(self):
@@ -142,6 +147,9 @@ class TestBaseballGame(unittest.TestCase):
                 for line in console:
                     if "RANDOM NUMBER" in line.upper():
                         random_number.append(line[-3:].strip())
+
+                log.warning(random_number)
+                
                 target_number = random_number[0]
                 for i in range(0, 899):
                     if int(input_list[i]) < int(target_number):

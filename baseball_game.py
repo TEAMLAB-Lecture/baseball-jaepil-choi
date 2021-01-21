@@ -159,10 +159,10 @@ def get_not_duplicated_three_digit_number():
         result = str(get_random_number())
         if is_validated_number(result):
             break
-        else:
-            if count == 1000:
-                raise Exception("Maximum count exceeded. Already tried 1000.")
-            count += 1
+        # else:
+        #     if count == 10000:
+        #         raise Exception("Maximum count exceeded. Already tried 1000.")
+        #     count += 1
     # ==================================
     return int(result)
 

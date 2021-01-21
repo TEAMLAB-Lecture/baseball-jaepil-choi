@@ -303,7 +303,8 @@ def main():
         user_input = input('Input guess number : ')
 
         if user_input == '0':
-            sys.exit(0)
+            # sys.exit(0)
+            return
 
         if is_validated_number(user_input):
             result = get_strikes_or_ball(user_input, random_number)
@@ -315,14 +316,16 @@ def main():
                     ask = input('You win, one more? (Y/N) : ')
 
                     if ask == '0':
-                        sys.exit(0)
+                        # sys.exit(0)
+                        return
 
                     if is_yes(ask):
                         break
                     elif is_no(ask):
                         print('Thank you for using this program')
                         print('End of the Game')
-                        sys.exit(0)
+                        # sys.exit(0)
+                        return
                     else:
                         continue
                 
